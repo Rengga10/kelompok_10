@@ -261,7 +261,9 @@
   padding: 20px;
 }
 .modal-materi:target {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .materi-box {
   background: #fff;
