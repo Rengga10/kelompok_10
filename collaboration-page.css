@@ -268,11 +268,8 @@
 .materi-box {
   background: #fff;
   max-width: 650px;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 15px;
-  position: relative;
-  text-align: left;
+  width: calc(100% - 40px);
+  margin: auto;
 }
 .materi-close {
   position: absolute;
