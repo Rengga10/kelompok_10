@@ -280,10 +280,21 @@
   text-decoration: none;
   color: #000;
 }
+.poster-single {
+  max-width: 420px;
+  margin: 0 auto 30px auto;
+}
+.poster-main {
+  max-width: 380px;
+  margin: 0 auto;
+}
 .poster-main img {
   cursor: pointer;
   width: 100%;
+  max-height: 320px;
+  object-fit: cover;
   border-radius: 12px;
+  display: block;
 }
 .poster-main img:hover {
   opacity: .85;
