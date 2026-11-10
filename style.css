@@ -712,4 +712,47 @@ img {
   .footer-content {
     grid-template-columns: 1fr;
   }
-   }
+
+.why-section {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.why-content {
+  gap: 30px !important;
+}
+.why-text {
+  padding-right: 4px !important;
+}
+.why-image {
+  gap: 20px !important;
+}
+.why-image img {
+  height: auto !important;
+  min-height: 220px !important;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .nav-container {
+    width: 92% !important;
+  }
+  .why-content {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .why-text {
+    order: 1;
+  }
+  .why-image {
+    order: 2;
+  }
+  .why-image img {
+    height: 240px !important;
+  }
+  .nav-container {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
