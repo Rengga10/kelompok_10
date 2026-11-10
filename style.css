@@ -730,7 +730,7 @@ img {
   height: auto !important;
   min-height: 220px !important;
 }
-
+Bu
 @media (max-width: 768px) {
   .container,
   .nav-container {
@@ -755,4 +755,20 @@ img {
     padding-top: 12px !important;
     padding-bottom: 12px !important;
   }
+
+     /* NAVBAR KASIH MARGIN KIRI - TEMPEL PALING BAWAH */
+.navbar {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.nav-container {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.logo {
+  margin-left: 4px !important;
+  padding-left: 2px !important;
+}
+.nav-menu {
+  padding-right: 4px !important;
 }
