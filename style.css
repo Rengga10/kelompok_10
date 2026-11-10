@@ -59,32 +59,29 @@ header {
     background: #fff;
 }
 
-.navbar {
+..navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    box-sizing: border-box;
-    background: #fff;
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    z-index: 99;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 3px 18px rgba(0,0,0,0.06);
 }
 
 .nav-container {
-  width: min(1120px, 90%);
-  min-height: 72px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 72px;
+    padding: 0 30px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 }
+
 .nav-menu {
   padding-left: 10px !important;
 }
