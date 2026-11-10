@@ -744,4 +744,43 @@ header {
     grid-template-columns: 1fr;
   }
 
+/* JARAK LOGO DAN NAVBAR */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.logo {
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px !important;
+  margin-left: auto;
+}
+
+/* KHUSUS HP */
+@media (max-width: 600px) {
+  .nav-container {
+    gap: 15px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav-menu {
+    gap: 15px !important;
+  }
+}
+
    
