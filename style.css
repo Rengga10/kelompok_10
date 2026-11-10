@@ -744,43 +744,81 @@ header {
     grid-template-columns: 1fr;
   }
 
-/* JARAK LOGO DAN NAVBAR */
+
+/* NAVBAR LOGO KIRI MENU KANAN */
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 99999 !important;
+  background: rgba(255,255,255,0.97) !important;
+}
+
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px !important;
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 72px !important;
+  padding: 0 25px !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
 }
 
 .logo {
-  margin-right: 25px;
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
 }
 
 .nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 25px !important;
-  margin-left: auto;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 18px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+.nav-menu a {
+  white-space: nowrap !important;
+  font-size: 12px !important;
 }
 
 /* KHUSUS HP */
 @media (max-width: 600px) {
   .nav-container {
-    gap: 15px !important;
-    padding-left: 15px;
-    padding-right: 15px;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
   }
 
   .logo {
-    margin-right: 0;
+    font-size: 13px !important;
+    gap: 5px !important;
+  }
+
+  .logo img {
+    width: 30px !important;
+    height: 30px !important;
   }
 
   .nav-menu {
-    gap: 15px !important;
+    flex: 1 !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
   }
-}
+
+  .nav-menu a {
+    font-size: 10px !important;
+  }
 
    
