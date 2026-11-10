@@ -70,12 +70,19 @@ img {
   gap: 24px;
 }
 
-.logo::before {
-  content: '♻ Sampah Jadi Cuan';
-  color: var(--green-dark);
-  font-size: 1.15rem;
-  font-weight: 800;
-  white-space: nowrap;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'TeX Gyre Termes';
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
 }
 
 .nav-menu {
