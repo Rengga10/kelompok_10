@@ -14,6 +14,7 @@
   --text: #26352b;
   --muted: #68766c;
   --white: #fff;
+  --black: #26352b;
   --shadow: 0 12px 32px rgba(25, 75, 45, .10);
   --radius: 18px;
 }
@@ -55,6 +56,8 @@ img {
 
 .navbar {
   position: sticky;
+  top: 0;
+  z-index: 99;
   background: rgba(255,255,255,.96);
   backdrop-filter: blur(12px);
   box-shadow: 0 3px 18px rgba(0,0,0,.06);
@@ -71,18 +74,23 @@ img {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: var(--black);
-    font-size: 28px;
-    font-weight: 700;
-    font-family: 'TeX Gyre Termes';
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green-dark);
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .nav-menu {
@@ -125,6 +133,7 @@ img {
   line-height: 1.12;
   font-weight: 800;
   letter-spacing: -2px;
+  text-shadow: 0 4px 20px rgba(0,0,0,.3);
 }
 
 .hero-underline {
@@ -170,7 +179,7 @@ img {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   align-items: start;
-  gap: 30px;
+  gap: 35px;
 }
 
 .why-text {
@@ -180,12 +189,15 @@ img {
 .why-text p {
   margin-bottom: 17px;
   color: var(--muted);
+  line-height: 1.8;
 }
 
 .why-text h3 {
-  margin: 25px 0 8px;
+  margin: 28px 0 8px;
   color: var(--green-dark);
   font-size: 1.2rem;
+  border-left: 4px solid #22c55e;
+  padding-left: 10px;
 }
 
 .why-text ul {
@@ -195,11 +207,15 @@ img {
 
 .why-text li {
   padding: 3px 0;
+  line-height: 1.8;
 }
 
 .why-image {
   width: 100%;
   align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .why-image img {
@@ -208,7 +224,14 @@ img {
   object-fit: cover;
   border-radius: 20px;
   box-shadow: var(--shadow);
+  transition: .3s;
 }
+
+.why-image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
 /* KOLABORASI */
 .collaboration-section {
   padding: 90px 0;
@@ -616,19 +639,17 @@ img {
     grid-template-columns: 1.2fr .8fr;
     gap: 20px;
   }
-
   .why-image img {
     height: 280px;
   }
-
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .footer-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 /* RESPONSIVE HP */
 @media (max-width: 600px) {
   .nav-container {
@@ -636,27 +657,22 @@ img {
     flex-direction: column;
     gap: 9px;
   }
-
   .nav-menu {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px 17px;
   }
-
   .nav-menu a {
     font-size: .78rem;
   }
-
   .hero {
     min-height: 480px;
     padding: 70px 18px;
   }
-
   .hero h1 {
     letter-spacing: -1px;
   }
-
   .why-section,
   .collaboration-section,
   .products-section,
@@ -664,32 +680,29 @@ img {
   .team-section {
     padding: 65px 0;
   }
-
+  .why-content {
+    grid-template-columns: 1fr;
+  }
   .collab-wrapper,
   .products-grid,
   .contact-content,
   .team-grid {
     grid-template-columns: 1fr;
   }
-
   .collab-wrapper {
     max-width: 390px;
   }
-
   .product-image {
     height: 230px;
   }
-
   .contact-info,
   .contact-form {
     padding: 23px;
   }
-
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 25px 18px;
   }
-
   .materi-box {
     padding: 27px 21px;
   }
@@ -699,63 +712,4 @@ img {
   .footer-content {
     grid-template-columns: 1fr;
   }
-
-/* === UPGRADE ESTETIK - TEMPEL PALING BAWAH === */
-
-/* 1. Navbar dadi kaca */
-.navbar {
-  background: rgba(255,255,255,0.85) !important;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08) !important;
-}
-.logo span {
-  font-size: 17px !important;
-  letter-spacing: -0.3px;
-}
-
-/* 2. Hero dadi luwih alus + teks luwih mewah */
-.hero {
-  min-height: 520px !important;
-  background: linear-gradient(120deg, rgba(9,55,32,0.88), rgba(27,123,70,0.75)), url('recycle.jpg') center/cover !important;
-}
-.hero h1 {
-  font-size: clamp(2.4rem, 7vw, 4.5rem) !important;
-  line-height: 1.05 !important;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-.hero-subtitle {
-  font-size: 18px !important;
-  opacity: 0.95;
-  margin-top: 16px !important;
-}
-
-/* 3. Bagian Why dadi kartu, ra flat */
-.why-section {
-  background: #f8faf7 !important;
-  padding: 60px 0 !important;
-}
-.why-content {
-  gap: 35px !important;
-  align-items: flex-start !important;
-}
-.why-text p, .why-text li {
-  line-height: 1.8 !important;
-  color: #444 !important;
-  font-size: 15px !important;
-}
-.why-text h3 {
-  margin-top: 28px !important;
-  color: #14532d !important;
-  font-size: 18px !important;
-  border-left: 4px solid #22c55e;
-  padding-left: 10px;
-}
-.why-image img {
-  border-radius: 20px !important;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
-  transition: 0.3s;
-}
-.why-image img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
-}
+   }
