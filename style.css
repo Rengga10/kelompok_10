@@ -1,6 +1,7 @@
+
 /* =====================================================
    Sampah Jadi Cuan
-   Tema: Eco-friendly, hijau, modern, responsif
+   Tema: Eco-friendly, hijau, modern
    ===================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
@@ -19,6 +20,7 @@
   --radius: 18px;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -54,37 +56,32 @@ img {
 }
 
 /* NAVBAR */
-
 header {
-    width: 100%;
-    background: #fff;
+  width: 100%;
 }
 
-/* NAVBAR */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 3px 18px rgba(0,0,0,0.06);
 }
 
 .nav-container {
-    width: 100%;
-    max-width: 100%;
-    min-height: 72px;
-    padding: 0 30px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-.nav-menu {
-  padding-left: 10px !important;
+  width: 100%;
+  max-width: 100%;
+  min-height: 72px;
+  padding: 0 30px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .logo {
@@ -94,7 +91,6 @@ header {
   color: var(--green-dark);
   font-size: 18px;
   font-weight: 800;
-  font-family: 'Poppins', sans-serif;
   letter-spacing: -0.3px;
   white-space: nowrap;
 }
@@ -112,6 +108,7 @@ header {
   align-items: center;
   gap: 30px;
   list-style: none;
+  margin-left: auto;
 }
 
 .nav-menu a {
@@ -119,6 +116,7 @@ header {
   font-size: .9rem;
   font-weight: 600;
   transition: .25s;
+  white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -185,7 +183,7 @@ header {
 
 /* WHY / PENJELASAN */
 .why-section {
-  padding: 90px 0;
+  padding: 90px 20px;
   background: var(--white);
 }
 
@@ -653,12 +651,15 @@ header {
     grid-template-columns: 1.2fr .8fr;
     gap: 20px;
   }
+
   .why-image img {
     height: 280px;
   }
+
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .footer-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -667,26 +668,33 @@ header {
 /* RESPONSIVE HP */
 @media (max-width: 600px) {
   .nav-container {
-    padding: 13px 0;
+    min-height: 72px;
+    padding: 10px 15px;
     flex-direction: column;
     gap: 9px;
   }
+
   .nav-menu {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px 17px;
+    margin-left: 0;
   }
+
   .nav-menu a {
     font-size: .78rem;
   }
+
   .hero {
     min-height: 480px;
     padding: 70px 18px;
   }
+
   .hero h1 {
     letter-spacing: -1px;
   }
+
   .why-section,
   .collaboration-section,
   .products-section,
@@ -694,92 +702,46 @@ header {
   .team-section {
     padding: 65px 0;
   }
+
   .why-content {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
+
   .collab-wrapper,
   .products-grid,
   .contact-content,
   .team-grid {
     grid-template-columns: 1fr;
   }
+
   .collab-wrapper {
     max-width: 390px;
   }
+
   .product-image {
     height: 230px;
   }
+
   .contact-info,
   .contact-form {
     padding: 23px;
   }
+
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 25px 18px;
   }
+
   .materi-box {
     padding: 27px 21px;
   }
 }
 
+/* RESPONSIVE LAYAR KECIL */
 @media (max-width: 380px) {
   .footer-content {
     grid-template-columns: 1fr;
   }
 
-.why-section {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
-.why-content {
-  gap: 30px !important;
-}
-.why-text {
-  padding-right: 4px !important;
-}
-.why-image {
-  gap: 20px !important;
-}
-.why-image img {
-  height: auto !important;
-  min-height: 220px !important;
-}
-Bu
-@media (max-width: 768px) {
-  .container,
-  .nav-container {
-    width: 92% !important;
-  }
-  .why-content {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-  .why-text {
-    order: 1;
-  }
-  .why-image {
-    order: 2;
-  }
-  .why-image img {
-    height: 240px !important;
-  }
-  .nav-container {
-    flex-direction: column !important;
-    gap: 10px !important;
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-  }
-
-     /* NAVBAR KASIH MARGIN KIRI - TEMPEL PALING BAWAH */
-.navbar {
-  padding-left: 18px !important;
-  padding-right: 18px !important;
-}
-.nav-container {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
-.logo {
-  margin-left: 4px !important;
-  padding-left: 2px !important;
-}
+   
