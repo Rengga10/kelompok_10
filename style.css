@@ -700,6 +700,62 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .logo::before {
-    font-size: 1rem;
-  }
+/* === UPGRADE ESTETIK - TEMPEL PALING BAWAH === */
+
+/* 1. Navbar dadi kaca */
+.navbar {
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08) !important;
+}
+.logo span {
+  font-size: 17px !important;
+  letter-spacing: -0.3px;
+}
+
+/* 2. Hero dadi luwih alus + teks luwih mewah */
+.hero {
+  min-height: 520px !important;
+  background: linear-gradient(120deg, rgba(9,55,32,0.88), rgba(27,123,70,0.75)), url('recycle.jpg') center/cover !important;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.5rem) !important;
+  line-height: 1.05 !important;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.hero-subtitle {
+  font-size: 18px !important;
+  opacity: 0.95;
+  margin-top: 16px !important;
+}
+
+/* 3. Bagian Why dadi kartu, ra flat */
+.why-section {
+  background: #f8faf7 !important;
+  padding: 60px 0 !important;
+}
+.why-content {
+  gap: 35px !important;
+  align-items: flex-start !important;
+}
+.why-text p, .why-text li {
+  line-height: 1.8 !important;
+  color: #444 !important;
+  font-size: 15px !important;
+}
+.why-text h3 {
+  margin-top: 28px !important;
+  color: #14532d !important;
+  font-size: 18px !important;
+  border-left: 4px solid #22c55e;
+  padding-left: 10px;
+}
+.why-image img {
+  border-radius: 20px !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+  transition: 0.3s;
+}
+.why-image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+}
