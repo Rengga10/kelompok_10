@@ -72,6 +72,9 @@ img {
   justify-content: space-between;
   gap: 24px;
 }
+.nav-menu {
+  padding-left: 4px !important;
+}
 
 .logo {
   display: flex;
@@ -768,7 +771,4 @@ Bu
 .logo {
   margin-left: 4px !important;
   padding-left: 2px !important;
-}
-.nav-menu {
-  padding-right: 4px !important;
 }
